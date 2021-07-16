@@ -1,8 +1,12 @@
 const express = require("express");
 const path = require("path");
-const app = express();
-const PORT = process.env.PORT || 5000;
+const cors = require("cors");
 const expressStaticGzip = require("express-static-gzip");
+
+const PORT = process.env.PORT || 7000;
+const app = express();
+
+app.use(cors());
 
 // app.use(express.json({ extended: false }));
 
